@@ -1,0 +1,176 @@
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 1.2vw;
+  margin-bottom: 8px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  padding: 2% 5%;
+  min-height: 90vh;
+  background-color: #A9F16C;
+}
+
+.topDataWrapper {
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  background-color: #A9F16C;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topData {
+  width: 90vw;
+  height: 100px;
+  margin: 20px 0;
+  /* position: fixed;
+  top: 2vh;
+  left: 5vw; */
+  padding: 8px 20px;
+  background-color: #119c18;
+  color:#fff;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+}
+
+.mainControls {
+  /* display: flex;
+  flex-direction: row;
+  gap: 36px; */
+}
+
+.groupArea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-basis: 220px;
+  flex-shrink: 0; 
+}
+
+.newGroupArea {
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+.goalArea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 0.8;
+}
+
+.dateNewArea {
+  visibility: visible;
+}
+
+.dateStartArea {
+  visibility: hidden;
+}
+
+.dateFinishArea {
+  visibility: hidden;
+}
+
+.startFinishDateArea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.setOfFields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mainData {
+  /* background-color: #984fdf; */
+  padding: calc(2vh + 120px) 0 calc(2vh + 40px) 0;
+  display: grid;
+  grid-template-columns: 1fr 4fr .5fr;
+}
+
+.dataColumn {
+
+}
+
+#table {
+  /* max-width: 30vw; */
+  max-height: 300px;
+  margin: 0 40px;
+  visibility: hidden;
+}
+
+.imgMock {
+  max-width: 500px;
+  max-height: 500px;
+  margin: 20px 40px;
+  visibility: hidden;
+}
+
+.btnWrapper {
+  width: 100vw;
+  background-color: #A9F16C;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitMainForm {
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #119c18;
+  color: #fff;
+  width: 80vw;
+  margin: 20px 0;
+  /* position: fixed;
+  bottom: 2vh;
+  left: 10vw; */
+}

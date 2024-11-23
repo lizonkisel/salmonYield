@@ -1,0 +1,204 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalmonYield</title>
+  <link
+    rel="shortcut icon"
+    href="./favicon.ico"
+    type="image/x-icon"
+  />
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+</head>
+<body>
+  <header></header>
+  <main class="main">
+    <div class="topDataWrapper">
+      <section class="topData">
+        <!-- <form class="mainControls"> -->
+          <div class="groupArea">
+            <p>
+              <label for="group">Выберите группу:</label>
+              <select id="group" form="postFish" required>
+                <option value="">--Выберите группу:--</option>
+                <option value="new">Создать новую группу</option>
+                <option value="U1">U1</option>
+                <option value="U2">U2</option>
+                <option value="U3">U3</option>
+              </select>
+            </p>
+            <p class="newGroupArea">
+              <label for="newGroup">Введите название группы:</label>
+              <input class="newGroup" form="postFish" type="text" id="newGroup">
+            </p>
+          </div>
+  
+          <fieldset class="goalArea">
+            <legend>Выберите действие:</legend>
+            <label>
+              <input form="postFish" type="radio" name="goal" value="newData" checked/> Вношу новые данные
+            </label>
+            <label>
+              <input form="postFish" type="radio" name="goal" value="Statistic"/> Хочу посмотреть статистику
+            </label>
+          </fieldset>
+  
+          <p class="dateNewArea">
+            <label for="dateStart">Введите дату замера:</label>
+            <input form="postFish" name="date" type="date" id="dateNew" required>
+          </p>
+  
+          <div class="startFinishDateArea">
+            <p class="dateStartArea">
+              <label for="dateStart">Введите стартовую дату:</label>
+              <input form="postFish" name="date" type="date" id="dateStart">
+            </p>
+    
+            <p class="dateFinishArea">
+              <label for="dateFinish">Введите конечную дату:</label>
+              <input form="postFish" name="date" type="date" id="dateFinish">
+            </p>
+          </div>
+        <!-- </form> -->
+      </section>
+    </div>
+    <section class="mainData">
+      <div class="dataColumn dataColumnInputs">
+        <form action="" name="postFish" id="postFish">
+          <fieldset>
+            <legend>Гидрохимические показатели:</legend>
+            <ul class="setOfFields">
+              <li class="field">
+                <label for="temperature">Температура, C</label>
+                <input type="number" min="0" max="40" id="temperature" required>
+              </li>
+              <li class="field">
+                <label for="NH4">NH4, мг/л</label>
+                <input type="number" min="0" max="10" id="NH4" required>
+              </li>
+              <li class="field">
+                <label for="NO2">NO2, мг/л</label>
+                <input type="number" min="0" max="1" id="NO2" required>
+              </li>
+              <li class="field">
+                <label for="pH">pH</label>
+                <input type="number" min="6" max="8" id="pH" required>
+              </li>
+              <li class="field">
+                <label for="Kh">Kh</label>
+                <input type="number" min="5" max="10" step="1" id="Kh" required>
+              </li>
+              <li class="field">
+                <label for="CO2">CO2, мг/л</label>
+                <input type="number" min="0" max="10" id="CO2" required>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Общие показатели:</legend>
+            <ul class="setOfFields">
+              <li class="field">
+                <label for="amount">Количество, шт</label>
+                <input type="number" min="0" id="amount" required>
+              </li>
+              <li class="field">
+                <label for="biomass">Биомасса, кг</label>
+                <input type="number" min="0"  id="biomass" required>
+              </li>
+              <li class="field">
+                <label for="averMass">Средний вес факт., г</label>
+                <input type="number" min="0" id="averMass" required>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Породные данные:</legend>
+            <ul class="setOfFields">
+              <li>
+                <fieldset class="field">
+                  <legend>Порода форели</legend>
+                  <label>
+                      <input type="radio" name="breed" value="Donaldson" checked/> Дональдсона
+                  </label>
+                  <label>
+                      <input type="radio" name="breed" value="Steelhead"/> Стальголовый лосось
+                  </label>
+                </fieldset>
+              </li>
+              <li>
+                <fieldset class="field">
+                  <legend>Генерация, пол</legend>
+                  <label>
+                      <input type="radio" name="gender" value="male" checked/> Самец
+                  </label>
+                  <label>
+                      <input type="radio" name="gender" value="female"/> Самка
+                  </label>
+                </fieldset>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Показатели кормления:</legend>
+            <ul class="setOfFields">
+              <li class="field">
+                <label for="feedStandartPercent">Норма корма, %</label>
+                <input type="number" min="0" id="feedStandartPercent" required>
+              </li>
+              <li class="field">
+                <label for="feedStrategy">Стратегия кормления, %</label>
+                <input type="number" min="0" max="100" id="feedStrategy" required>
+              </li>
+              <li class="field">
+                <label for="realStandart">Норма факт, %</label>
+                <input type="number" min="0" id="realStandart" required>
+              </li>
+              <li class="field">
+                <label for="feedStandartMass">Норма корма, г</label>
+                <input type="number" min="0" id="feedStandartMass" required>
+              </li>
+              <li class="field">
+                <label for="feedSize">Размер корма, мм</label>
+                <input type="number" min="0" max="3" id="feedSize" required>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Смертность</legend>
+            <ul class="setOfFields">
+              <li class="field">
+                <label for="deathAmount">Штуки</label>
+                <input type="number" id="deathAmount" required>
+              </li>
+              <li class="field">
+                <label for="deathPercent">%</label>
+                <input type="number" min="0" max="100" id="deathPercent" required>
+              </li>
+            </ul>
+          </fieldset>
+          <!-- <button class="submitMainForm" type="submit">Внести запись</button> -->
+        </form>
+      </div>
+      <div class="btnWrapper">
+        <button class="submitMainForm" form="postFish" type="submit">Внести запись</button>
+      </div>
+      <div class="dataColumn dataColumnVisual">
+        <div id="table"></div>
+        <img class="imgMock" src="./corr_all.png" alt="diagramm">
+      </div>
+      <div class="dataColumn dataColumnDeviation"></div>
+    </section>
+  </main>
+  <script type="module">
+    import {
+        Grid,
+        html
+    } from "https://unpkg.com/gridjs?module";
+</script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
